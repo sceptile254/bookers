@@ -17,7 +17,7 @@ class BooksController < ApplicationController
     #データをデータベースに保存するためのsaveメソッド実行
     book.save
     #トップ画面へリダイレクト
-    redirect_to '/top'
+    redirect_to '/'
   end
 
 
