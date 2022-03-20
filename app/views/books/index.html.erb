@@ -40,6 +40,15 @@
 
 <!--New book 投稿部分-->
 <h2>New book</h2>
+
+<% if @book.errors.any? %>
+  <%= @book.errors.count %> errors prohibited this book from being saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 <!--form_withの利用-->
 <%= form_with model: Book.new, url: '/books', method: :post do |f| %>
 

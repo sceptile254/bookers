@@ -10,15 +10,16 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
-  def create #createアクションを定義
+  def create
     #データを受け取り新規登録するためのインスタンス
-    book = Book.new(book_params)
+    @book = Book.new(book_params)
 
-    if book.save
+    if @book.save
       flash[:notice] = "Book was successfully created."
-      redirect_to book_path(book.id)
+      redirect_to book_path(@book.id)
     else
-      redirect_to '/books'
+      @books = Book.all
+      render :index
     end
     #データをデータベースに保存するためのsaveメソッド実行
     #book.save
