@@ -112,8 +112,17 @@ p {
   line-height: 18px;
 }
 
+a.start-button {
+  color: #666666;
+}
+
 a {
-    color: #666666;
+  color: black;
+}
+
+a:hover {
+  color: white;
+  background-color: black;
 }
 
 a:-webkit-any-link {
@@ -121,12 +130,6 @@ a:-webkit-any-link {
   text-decoration: underline;
 }
 
-a.show_id:hover, a.edit_id:hover, a.destroy_id:hover {
-  color: white;
-  background-color: black;
-}
-
-a.start-button:hover{
-  color: white;
-	background-color: black;
+#notice {
+  color: green;
 }
