@@ -104,7 +104,7 @@ td {
   vertical-align: inherit;
 }
 
-p {
+p, ol, ul {
   display: block;
   margin:33px;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -132,4 +132,54 @@ a:-webkit-any-link {
 
 #notice {
   color: green;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+div {
+  display: block;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+div.field_with_errors {
+  margin-bottom: 10px;
+}
+
+.label_with_errors {
+  background-color: red;
+  display:inline;
+  padding: 2px;
 }

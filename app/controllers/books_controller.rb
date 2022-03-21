@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
 
   def new
+    # @book = Book.new
   end
 
   def index
@@ -12,12 +13,15 @@ class BooksController < ApplicationController
 
   def create
     #データを受け取り新規登録するためのインスタンス
+    # @book = Book.new(book_params)
     @book = Book.new(book_params)
 
     if @book.save
+      #投稿に成功した時の処理
       flash[:notice] = "Book was successfully created."
       redirect_to book_path(@book.id)
     else
+      #投稿失敗時の処理]
       @books = Book.all
       render :index
     end
@@ -44,7 +48,9 @@ class BooksController < ApplicationController
       flash[:notice] = "Book was successfully updated."
       redirect_to book_path(book.id)
     else
-      redirect_to '/books'
+      #更新失敗時の処理
+      @book = book
+      render :edit
     end
 
   end
